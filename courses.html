@@ -1,1 +1,149 @@
 
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дәрістер | ElectroMagnetic Edu</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f3f6fc;
+  font-family: Arial, sans-serif;
+  color: #172554;
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+nav {
+  background: #1e40af;
+  text-align: center;
+  padding: 17px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+}
+
+main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px #0000000a;
+}
+
+.number {
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card h3 {
+  color: #172554;
+  line-height: 1.5;
+  min-height: 55px;
+}
+
+.status {
+  color: #64748b;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  color: #64748b;
+  padding: 35px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>ElectroMagnetic Edu</h1>
+  <p>Электр және магнетизм пәні</p>
+  <p>15 тақырыптан тұратын оқу курсы</p>
+</header>
+
+<nav>
+  <a href="index.html">Басты бет</a>
+  <a href="courses.html">Дәрістер</a>
+</nav>
+
+<main>
+  <h2>📚 Теориялық дәрістер</h2>
+  <p>Өзіңізге қажетті тақырыппен танысыңыз.</p>
+  <div class="grid" id="lectures"></div>
+</main>
+
+<footer>
+  ElectroMagnetic Edu © 2026
+</footer>
+
+<script>
+const topics = [
+  "Электростатика",
+  "Электростатикалық өріс",
+  "Электростатикалық өрістегі өткізгіштер",
+  "Диэлектриктердегі өріс",
+  "Тұрақты электр тогы",
+  "Тұрақты электр өрісі",
+  "Әртүрлі ортадағы электр тогы",
+  "Жартылайөткізгіштер",
+  "Тұрақты магнит өрісі",
+  "Электр және магнит өрісінің жылжымалы зарядқа әсері",
+  "Заттың магниттік қасиеттері",
+  "Электромагниттік индукция",
+  "Электромагниттік өріс",
+  "Электромагниттік тербелістер",
+  "Электромагниттік толқындар"
+];
+
+const container = document.getElementById("lectures");
+
+topics.forEach((topic, index) => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const number = document.createElement("div");
+  number.className = "number";
+  number.textContent = "ДӘРІС " + (index + 1);
+
+  const title = document.createElement("h3");
+  title.textContent = topic;
+
+  const status = document.createElement("p");
+  status.className = "status";
+  status.textContent = "📖 Материал әзірленуде";
+
+  card.append(number, title, status);
+  container.appendChild(card);
+});
+</script>
+
+</body>
+</html>
