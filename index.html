@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>ElectroMagnetic Edu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fc;
+      color: #172554;
+    }
+    header {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    nav {
+      background: #1e40af;
+      padding: 18px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 12px;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px #0001;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ElectroMagnetic Edu</h1>
+    <p>Электр және магнетизмді оқыту платформасы</p>
+  </header>
+
+  <nav>
+    <a href="#courses">Курстар</a>
+    <a href="#ai">Жасанды интеллект</a>
+    <a href="#tests">Тесттер</a>
+    <a href="#labs">Зертханалар</a>
+  </nav>
+
+  <main>
+    <h2>Білім беру платформасына қош келдіңіз!</h2>
+
+    <div class="grid">
+      <div class="card" id="courses">
+        <h3>📚 Курстар</h3>
+        <p>Электр және магнетизм дәрістері</p>
+      </div>
+
+      <div class="card" id="ai">
+        <h3>🤖 ЖИ көмекшісі</h3>
+        <p>Жасанды интеллект көмегімен оқыту</p>
+      </div>
+
+      <div class="card" id="tests">
+        <h3>📝 Тесттер</h3>
+        <p>Pre-test және Post-test</p>
+      </div>
+
+      <div class="card" id="labs">
+        <h3>🔬 Виртуалды зертханалар</h3>
+        <p>Интерактивті физикалық тәжірибелер</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
