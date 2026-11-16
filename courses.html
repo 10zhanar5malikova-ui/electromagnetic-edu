@@ -141,6 +141,17 @@ topics.forEach((topic, index) => {
   status.textContent = "📖 Материал әзірленуде";
 
   card.append(number, title, status);
+  
+if (index === 0) {
+  const link = document.createElement("a");
+  link.href = "lecture1.html";
+  link.textContent = "📖 Дәрісті ашу →";
+  link.style.display = "inline-block";
+  link.style.marginTop = "15px";
+  link.style.color = "#2563eb";
+  link.style.fontWeight = "bold";
+  card.appendChild(link);
+}
   container.appendChild(card);
 });
 </script>
