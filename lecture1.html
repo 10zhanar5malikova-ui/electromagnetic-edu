@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дәріс 1 | Электростатика</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fc;
+  color: #172554;
+  line-height: 1.6;
+}
+header {
+  background: linear-gradient(120deg,#172554,#2563eb);
+  color: white;
+  padding: 42px 20px;
+  text-align: center;
+}
+nav {
+  background: #1e40af;
+  padding: 15px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 18px;
+}
+section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px #0000000a;
+}
+h2 { color: #1d4ed8; }
+.formula {
+  background: #eff6ff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+input[type=number] {
+  padding: 11px;
+  width: 100%;
+  max-width: 220px;
+  margin: 7px 0 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+button:hover { background: #1d4ed8; }
+.option {
+  display: block;
+  margin: 12px 0;
+}
+.result {
+  margin-top: 15px;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #64748b;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Дәріс 1. Электростатика</h1>
+  <p>ElectroMagnetic Edu</p>
+  <p>Электр және магнетизм пәні</p>
+</header>
+
+<nav>
+  <a href="index.html">Басты бет</a>
+  <a href="courses.html">Дәрістер</a>
+  <a href="#theory">Теория</a>
+  <a href="#test">Тест</a>
+</nav>
+
+<main>
+<section id="theory">
+  <h2>📘 Теориялық материал</h2>
+  <h3>1. Электр заряды</h3>
+  <p>
+    Электр заряды — денелер мен бөлшектердің
+    электромагниттік өзара әрекеттесуін
+    сипаттайтын физикалық шама.
+  </p>
+  <p>
+    Электр зарядтары оң және теріс болады.
+    Аттас зарядтар тебіледі, ал әр аттас
+    зарядтар тартылады.
+  </p>
+
+  <h3>2. Зарядтың сақталу заңы</h3>
+  <p>
+    Оқшауланған жүйедегі электр зарядтарының
+    алгебралық қосындысы өзгермейді.
+  </p>
+
+  <h3>3. Кулон заңы</h3>
+  <p>
+    Екі нүктелік заряд арасындағы электростатикалық
+    күш зарядтардың көбейтіндісінің модуліне
+    тура, арақашықтықтың квадратына кері
+    пропорционал.
+  </p>
+  <div class="formula">
+    F = k |q₁q₂| / r²
+  </div>
+  <p>
+    k ≈ 8,99 × 10⁹ Н·м²/Кл²
+    (вакуум үшін).
+  </p>
+</section>
+
+<section id="calculator">
+  <h2>⚡ Интерактивті есептеу</h2>
+  <p>Кулон заңы бойынша күшті есептеңіз.</p>
+
+  <label for="q1">Бірінші заряд (мкКл)</label><br>
+  <input type="number" id="q1" value="2" step="any"><br>
+
+  <label for="q2">Екінші заряд (мкКл)</label><br>
+  <input type="number" id="q2" value="-3" step="any"><br>
+
+  <label for="r">Арақашықтық (м)</label><br>
+  <input type="number" id="r" value="0.2"
+    step="any" min="0.000001"><br>
+
+  <button type="button" onclick="calculate()">
+    Есептеу
+  </button>
+  <p class="result" id="answer" aria-live="polite"></p>
+</section>
+
+<section id="materials">
+  <h2>📚 Сабақ материалдары</h2>
+  <h3>Теориялық PDF дәріс</h3>
+  <p>PDF файлы кейін жүктеледі.</p>
+
+  <h3>🎬 Бейнесабақ</h3>
+  <p>Бейнесабақ кейін қосылады.</p>
+
+  <h3>🤖 ЖИ тапсырмасы</h3>
+  <p>
+    ЖИ ұсынған түсіндірмелерді талдау және
+    олардың ғылыми дұрыстығын тексеру
+    тапсырмалары осы бөлімге енгізіледі.
+  </p>
+</section>
+
+<section id="test">
+  <h2>📝 Білімді тексеру</h2>
+  <p>
+    Екі заряд арасындағы қашықтық 2 есе
+    артса, Кулон күші қалай өзгереді?
+  </p>
+
+  <form id="quiz">
+    <label class="option">
+      <input type="radio" name="q" value="a">
+      2 есе артады
+    </label>
+    <label class="option">
+      <input type="radio" name="q" value="b">
+      2 есе кемиді
+    </label>
+    <label class="option">
+      <input type="radio" name="q" value="c">
+      4 есе кемиді
+    </label>
+    <label class="option">
+      <input type="radio" name="q" value="d">
+      Өзгермейді
+    </label>
+    <button type="submit">Жауапты тексеру</button>
+  </form>
+  <p class="result" id="feedback" aria-live="polite"></p>
+</section>
+</main>
+
+<footer>ElectroMagnetic Edu © 2026</footer>
+
+<script>
+function calculate() {
+  const q1 = Number(document.getElementById("q1").value);
+  const q2 = Number(document.getElementById("q2").value);
+  const r = Number(document.getElementById("r").value);
+  const result = document.getElementById("answer");
+
+  if (!Number.isFinite(q1) || !Number.isFinite(q2) ||
+      !Number.isFinite(r) || r <= 0) {
+    result.textContent = "Мәндерді дұрыс енгізіңіз.";
+    return;
+  }
+
+  const k = 8.99e9;
+  const force = k * Math.abs(q1 * 1e-6 * q2 * 1e-6) / (r*r);
+
+  result.textContent =
+    "Күштің модулі: " + force.toPrecision(5) + " Н";
+}
+
+document.getElementById("quiz")
+  .addEventListener("submit", function(event) {
+    event.preventDefault();
+    const selected =
+      document.querySelector('input[name="q"]:checked');
+    const feedback = document.getElementById("feedback");
+
+    if (!selected) {
+      feedback.textContent = "Жауапты таңдаңыз.";
+    } else if (selected.value === "c") {
+      feedback.textContent =
+        "✅ Дұрыс! Күш 4 есе кемиді.";
+    } else {
+      feedback.textContent =
+        "❌ Қате. Кулон заңындағы r² тәуелділігін еске түсіріңіз.";
+    }
+  });
+</script>
+</body>
+</html>
